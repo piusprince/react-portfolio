@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {device} from '../../breakpoints'
 
 export const ServiceWrapper = styled.section`
     margin: 5rem;
@@ -17,11 +18,20 @@ export const ServiceGrid = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 20rem);
     gap: 5rem;
+
+
+    @media ${device.mobileL} {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 20rem);
+        gap: 5rem;
+    }
+    
 `
 
 
 export const Service1 = styled.div`
-    padding: 7rem;
+    padding: 5rem 9rem;
     border-radius: 1.5rem;
     /* background-color: #D1EEEB; */
     background-image: linear-gradient(to right bottom, #D1EEEB, #BEF6E4, rgba(0,0,0, .12));
@@ -33,6 +43,10 @@ export const Service1 = styled.div`
         transform: scale(1.1);
         transition: all .3s ease-in-out;
     }
+
+    @media ${device.tablet} {
+       padding: 5rem 3rem 3rem 4rem;
+    }
 `
 
 export const ServiceLogo1 = styled.div`
@@ -42,10 +56,14 @@ export const ServiceLogo1 = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+
+    @media ${device.tablet} {
+      font-size: 2rem;
+    }
 `
 
 export const Service2 = styled.div`
-    padding: 7rem;
+    padding: 5rem 9rem;
     border-radius: 1.5rem;
     background-image: linear-gradient(to left bottom, #D1EEEB, #BEF6E4, rgba(0,0,0, .12));
     position: relative;
@@ -57,6 +75,9 @@ export const Service2 = styled.div`
         transition: all .3s ease-in-out;
     }
 
+    @media ${device.tablet} {
+       padding: 5rem 3rem 3rem 4rem;
+    }
 `
 
 export const ServiceLogo2 = styled.div`
@@ -66,10 +87,15 @@ export const ServiceLogo2 = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+
+    @media ${device.tablet} {
+      font-size: 2rem;
+    }
 `
 
 export const Service3 = styled.div`
-    padding: 7rem;
+    /* padding: 7rem; */
+    padding: 5rem 9rem;
     border-radius: 1.5rem;
     background-image: linear-gradient(to right top, #D1EEEB, #BEF6E4, rgba(0,0,0, .12));
     position: relative;
@@ -81,6 +107,10 @@ export const Service3 = styled.div`
         transition: all .3s ease-in-out;
     }
 
+    @media ${device.tablet} {
+       padding: 5rem 3rem 3rem 4rem;
+    }
+
 `
 export const ServiceLogo3 = styled.div`
     color: #051937;
@@ -89,10 +119,16 @@ export const ServiceLogo3 = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+
+    @media ${device.tablet} {
+      font-size: 2rem;
+    }
 `
 
 export const Service4 = styled.div`
-    padding: 7rem;
+    /* padding: 7rem; */
+    padding: 5rem 9rem;
+    
     border-radius: 1.5rem;
     background-image: linear-gradient(to left top, #D1EEEB, #BEF6E4, rgba(0,0,0, .12));
     position: relative;
@@ -103,6 +139,10 @@ export const Service4 = styled.div`
         transform: scale(1.1);
         transition: all .3s ease-in-out;
     }
+
+    @media ${device.tablet} {
+       padding: 5rem 3rem 3rem 4rem;
+    }
 `
 
 export const ServiceLogo4 = styled.div`
@@ -112,6 +152,10 @@ export const ServiceLogo4 = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+
+    @media ${device.tablet} {
+      font-size: 2rem;
+    }
 `
 
 export const ServiceTitle = styled.h1`
@@ -123,4 +167,8 @@ export const ServiceTitle = styled.h1`
 export const ServiceMessage = styled.p`
     font-size: 1.6rem;
     color: #051937;
+
+    @media ${device.tablet} {
+        
+    }
 `

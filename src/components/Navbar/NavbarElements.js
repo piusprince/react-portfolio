@@ -1,14 +1,23 @@
 import styled from "styled-components"
 import { Link } from 'react-router-dom'
+import {device} from '../../breakpoints'
 
 
 export const NavWrapper = styled.nav`
-    padding: 2rem 5rem;
+    padding: 2rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #051937;
+    
+    
+    @media ${device.mobileL} {
+     
+    }
 
+    @media ${device.tablet} {
+        white-space: nowrap;
+    }
 `
 
 export const NavLogo = styled.div`
@@ -31,7 +40,11 @@ export const NavLogoText = styled(Link)`
 `
 
 export const NavMenu = styled.div`
-
+    /* background-color: red; */
+    
+@media ${device.mobileL} {
+    display: none;
+}
 `
 
 export const NavLink = styled(Link)`
@@ -56,5 +69,22 @@ export const NavBtn = styled.button`
         transform: scale(1.1);
         transition: all .2s ease-out;
     }
+
+    @media ${device.mobileL} {
+    display: none;
+}
 `
+
+export const NavMobileMenu = styled.div`
+    display: none;
+
+    @media ${device.mobileL} {
+    display: block;
+    position: sticky;
+    right: 0;
+    color: white;
+    font-size: 5rem;
+}
+`
+
 
