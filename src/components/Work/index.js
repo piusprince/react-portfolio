@@ -26,8 +26,6 @@ const Work = () => {
                     <ProjectTextContainer>
                         <ProjectTitle>{project.name}</ProjectTitle>
                         <ProjectDesc>{project.desc}</ProjectDesc>
-                        <ProjectGithub>{project.github}</ProjectGithub>
-                        <ProjectLiveLink>{project.liveLink}</ProjectLiveLink>
                     </ProjectTextContainer>
                     <ProjectImgContainer>
                         <ProjectImg src={project.img}/>

@@ -46,12 +46,6 @@ export const ProjectDesc = styled.p`
     font-size: 1.6rem;
 `
 
-export const ProjectGithub = styled.a`
-    cursor: pointer;
-`
-export const ProjectLiveLink = styled.a`
-    cursor: pointer;
-`
 
 export const ProjectImgContainer = styled.div`
     grid-area: b;

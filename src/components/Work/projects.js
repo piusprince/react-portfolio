@@ -7,24 +7,18 @@ export const projects = [
         name: 'Project 1',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris vitae ultricies leo integer malesuada nunc. Enim nec dui nunc mattis enim ut tellus elementum sagittis.',
         img: projectImg,
-        github: 'https://github.com/piusprince',
-        liveLink: 'https://piusprince.github.io/',
     },
     {
         id: 2,
         name: 'Project 2',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris vitae ultricies leo integer malesuada nunc. Enim nec dui nunc mattis enim ut tellus elementum sagittis.',
         img: bookstore,
-        github: 'https://github.com/piusprince',
-        liveLink: 'https://piusprince.github.io/',
     },
     {
         id: 1,
         name: 'Project 1',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris vitae ultricies leo integer malesuada nunc. Enim nec dui nunc mattis enim ut tellus elementum sagittis.',
         img: projectImg,
-        github: 'https://github.com/piusprince',
-        liveLink: 'https://piusprince.github.io/'
     }
     
 ]
