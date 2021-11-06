@@ -8,8 +8,6 @@ import {
     ProjectTextContainer,
     ProjectTitle,
     ProjectDesc,
-    ProjectGithub,
-    ProjectLiveLink,
     ProjectImgContainer,
     ProjectImg,
 } from './WorkElements'
