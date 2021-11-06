@@ -1,51 +1,36 @@
 import React from 'react'
-import {
-    WorkWrapper,
-    MockupWrapper,
-    Laptop,
-    Mobile,
-    ProjectMenu,
-    ProjectLink
-} from './WorkElements'
 import {projects} from './projects'
 
-const Work = ({laptop, mobile, project}) => {
- 
-    // const [current, setCurrent] = useState()
-    // const length = project.length;
+import {
+    WorkWrapper,
+    WorkTitle,
+    ProjectsContainer,
+    ProjectTextContainer,
+    ProjectTitle,
+    ProjectDesc,
+    ProjectImgContainer,
+    ProjectImg,
+} from './WorkElements'
 
-    // const nextProject = () => {
-    //     setCurrent(current === length -1 ? 0: length + 1)
-    // }
+const Work = () => {
 
-    // const prevProject = () => {
-    //     setCurrent(current === 0 ? length - 1 : current - 1 )
-        
-    // }
-
-    // if (!Array.isArray(project) || project.length <= 0) {
-    //     return null;
-    //   }
     
 
     return (
-        <WorkWrapper>
-            <MockupWrapper>
-                <Laptop src={laptop}/>
-                <Mobile src={mobile}/>
-            </MockupWrapper>
-
-            <ProjectMenu>
-                {projects.map(item => (
-                    
-                    <>
-                        <ProjectLink to='#'>{item.name}</ProjectLink>
-                    </>
-                ))}
-                <ProjectLink to="#">Other Projects &rarr;</ProjectLink>
-              
-            </ProjectMenu>
-        </WorkWrapper>
+       <WorkWrapper>
+           <WorkTitle>Projects</WorkTitle>
+            {projects.map(project => (
+                <ProjectsContainer key={project.id}>
+                    <ProjectTextContainer>
+                        <ProjectTitle>{project.name}</ProjectTitle>
+                        <ProjectDesc>{project.desc}</ProjectDesc>
+                    </ProjectTextContainer>
+                    <ProjectImgContainer>
+                        <ProjectImg src={project.img}/>
+                    </ProjectImgContainer>
+                </ProjectsContainer>
+            ))}
+       </WorkWrapper>
     )
 }
 

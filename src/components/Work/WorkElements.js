@@ -1,75 +1,57 @@
 import styled from "styled-components";
-import { Link } from 'react-router-dom'
-import {device} from '../../breakpoints'
+
 
 export const WorkWrapper = styled.section`
+    margin-top: 5rem;
     padding: 2rem 5rem;
-    max-height: 90rem;
 `
 
-export const MockupWrapper = styled.div`
-   position: relative;
-   max-height: 80rem;
-   padding: 0 0;
-
+export const WorkTitle = styled.h2`
+    text-align: center;
+    font-size: 3.2rem;
+    color: #051937;
+    margin-bottom: 5rem;
 `
 
-export const Laptop = styled.img`
-    height: 60rem;
-    display: none;
-   
-    @media ${device.tablet} {
-      height: auto;
-    }
+export const ProjectsContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "a b";             
+    margin-bottom: 5rem;
 
-    @media ${device.mobileL} {
-        display: none;
-    }
-    
-`
-
-export const Mobile = styled.img`
-    position: absolute;
-    top: 10rem;
-    right: 25rem;
-    height: 50rem;
-    border: none;
-    z-index: 100;
-    display: none;
-
-    @media ${device.tablet} {
-        top: 1rem;
-        right: 5rem;
-        /* height: auto; */
-        transform: scale(0.5);
-    
+    &:nth-child(3) {
+        grid-template-areas: "b a"; 
+        column-gap: 10rem;
     }
 `
 
-export const ProjectMenu = styled.div`
+export const ProjectTextContainer = styled.div`
+    grid-area: a;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+  
 
-    @media ${device.tablet} {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    @media ${device.mobileL} {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
 `
 
-export const ProjectLink = styled(Link)`
-    font-size: 1.6rem;
-    text-decoration: none;
+export const ProjectTitle = styled.h2`
+    color: #051937;
 
-    @media ${device.tablet} {
-        padding: 2rem;
-}
-    
+`
+
+export const ProjectDesc = styled.p`
+    margin-top: 2rem;
+    max-width: 80%;
+    font-size: 1.6rem;
+`
+
+
+export const ProjectImgContainer = styled.div`
+    grid-area: b;
+`
+
+export const ProjectImg = styled.img`
+    max-width: 100%;
+    border-radius: 2rem;
 `
