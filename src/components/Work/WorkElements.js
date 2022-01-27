@@ -49,4 +49,6 @@ export const ProjectImgContainer = styled.div`
 export const ProjectImg = styled.img`
   max-width: 100%;
   border-radius: 2rem;
+  height: auto;
+  width: 100%;
 `;
