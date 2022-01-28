@@ -81,6 +81,7 @@ export const BtnContainer = styled.div`
 
 export const SourceCodeBtn = styled.button`
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
   border: none;
@@ -96,9 +97,17 @@ export const SourceCodeBtn = styled.button`
     color: #051937;
     border: 1px solid #051937;
   }
+
+  @media ${device.tablet} {
+    margin-top: 1rem;
+    width: 100%;
+  }
 `;
 
 export const LiveViewBtn = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1rem 2rem;
   border: 1px solid #051937;
   border-radius: 0.5rem;
@@ -112,6 +121,11 @@ export const LiveViewBtn = styled.button`
     background-color: #051937;
     color: #fff;
     border: 1px solid #051937;
+  }
+
+  @media ${device.tablet} {
+    margin-top: 1rem;
+    width: 100%;
   }
 `;
 
