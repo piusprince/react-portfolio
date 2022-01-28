@@ -116,11 +116,12 @@ export const HeaderBtn = styled.button`
   /* margin-top: 5rem; */
   outline: none;
   white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+
   /* animation: pulsate 1s infinite; */
 
   &:hover {
     transform: scale(1.2);
-    transition: all 0.2s ease-in;
   }
 
   @media screen and (min-width: 769px) and (max-width: 1024px) {
