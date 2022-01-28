@@ -122,10 +122,15 @@ export const ProjectImgContainer = styled.div`
   align-items: center;
   margin-top: 5rem;
   margin-bottom: 5rem;
-  padding: 0 5rem;
+  padding: 2rem 5rem;
   background-color: #fff;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
 
   @media ${device.tablet} {
     margin-top: 0;
@@ -139,4 +144,15 @@ export const ProjectImg = styled.img`
   border-radius: 2rem;
   height: auto;
   width: 100%;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @media ${device.tablet} {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+  }
 `;
