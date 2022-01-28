@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
+import withReveal from "react-reveal/withReveal";
 import { device } from "../../breakpoints";
 
 export const HeaderWrapper = styled.section`
@@ -59,52 +61,58 @@ export const HeaderLeftWrapper = styled.div`
   }
 `;
 
-export const HeaderMainText = styled.h1`
-  font-size: 4.8rem;
-  font-weight: 700;
-  color: white;
-  text-align: left;
-  overflow: hidden;
-  margin-bottom: 5rem;
-
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    padding-bottom: 2rem;
+export const HeaderMainText = withReveal(
+  styled.h1`
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: white;
     text-align: left;
-    height: auto;
-  }
+    overflow: hidden;
+    margin-bottom: 5rem;
 
-  @media ${device.tablet} {
-    text-align: center;
-  }
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      padding-bottom: 2rem;
+      text-align: left;
+      height: auto;
+    }
 
-  @media ${device.mobileL} {
+    @media ${device.tablet} {
+      text-align: center;
+    }
+
+    @media ${device.mobileL} {
+      display: none;
+    }
+  `,
+  <Fade left />
+);
+
+export const HeaderAltText = withReveal(
+  styled.h1`
     display: none;
-  }
-`;
 
-export const HeaderAltText = styled.h1`
-  display: none;
+    @media ${device.mobileL} {
+      display: block;
+      color: white;
+      font-size: 4.8rem;
+      text-align: center;
+      margin: 10rem 0;
+    }
 
-  @media ${device.mobileL} {
-    display: block;
-    color: white;
-    font-size: 4.8rem;
-    text-align: center;
-    margin: 10rem 0;
-  }
+    @media ${device.mobileM} {
+      display: block;
+      color: white;
+      font-size: 4.8rem;
+      text-align: center;
+      margin: 1rem 0;
+    }
 
-  @media ${device.mobileM} {
-    display: block;
-    color: white;
-    font-size: 4.8rem;
-    text-align: center;
-    margin: 1rem 0;
-  }
-
-  @media screen and (min-width: 378px) and (max-width: 420px) {
-    margin-top: -3rem;
-  }
-`;
+    @media screen and (min-width: 378px) and (max-width: 420px) {
+      margin-top: -3rem;
+    }
+  `,
+  <Fade left />
+);
 
 export const HeaderBtn = styled.button`
   align-self: flex-start;
@@ -113,39 +121,18 @@ export const HeaderBtn = styled.button`
   background-color: #60ecbd;
   border-radius: 1rem;
   border: 0 solid;
-  /* margin-top: 5rem; */
   outline: none;
   white-space: nowrap;
   transition: all 0.3s ease-in-out;
 
-  /* animation: pulsate 1s infinite; */
-
   &:hover {
-    transform: scale(1.2);
-  }
-
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    transform: scale(1.1);
   }
 
   @media ${device.tablet} {
     display: flex;
     align-self: center;
   }
-
-  /* @media screen and (min-width: 378px) and (max-width: 420px) {
-        margin-top: -3rem;
-        margin-left: 8rem;
-    }
-
-
-    @media ${device.mobileL} {
-        margin-left: 5rem;
-    }
-
-    @media ${device.mobileS} {
-        margin-left: 2rem;
-        margin-top: 2rem;
-    } */
 `;
 
 export const HeaderRightWrapper = styled.div`
@@ -159,8 +146,11 @@ export const HeaderRightWrapper = styled.div`
   }
 `;
 
-export const HeaderSVG = styled.img`
-  background-size: cover;
-  width: 100%;
-  height: auto;
-`;
+export const HeaderSVG = withReveal(
+  styled.img`
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  `,
+  <Fade right />
+);
