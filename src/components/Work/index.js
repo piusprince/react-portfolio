@@ -8,9 +8,14 @@ import {
   ProjectTextContainer,
   ProjectTitle,
   ProjectDesc,
+  BtnContainer,
+  SourceCodeBtn,
+  LiveViewBtn,
   ProjectImgContainer,
   ProjectImg,
 } from "./WorkElements";
+import { FaGithub } from "react-icons/fa";
+import { GrLaunch } from "react-icons/gr";
 
 const Work = () => {
   return (
@@ -21,6 +26,16 @@ const Work = () => {
           <ProjectTextContainer>
             <ProjectTitle>{project.name}</ProjectTitle>
             <ProjectDesc>{project.desc}</ProjectDesc>
+            <BtnContainer>
+              <SourceCodeBtn>
+                <FaGithub style={{ marginRight: 5 }} />
+                Source code
+              </SourceCodeBtn>
+              <LiveViewBtn>
+                <GrLaunch style={{ marginRight: 5 }} />
+                View project
+              </LiveViewBtn>
+            </BtnContainer>
           </ProjectTextContainer>
           <ProjectImgContainer>
             <ProjectImg src={project.img} alt="Project image" />
