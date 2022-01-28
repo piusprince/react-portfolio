@@ -1,17 +1,23 @@
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
+import withReveal from "react-reveal/withReveal";
 import { device } from "../../breakpoints";
+import { Link } from "react-router-dom";
 
 export const WorkWrapper = styled.section`
   margin-top: 5rem;
   padding: 2rem 5rem;
 `;
 
-export const WorkTitle = styled.h2`
-  text-align: center;
-  font-size: 3.2rem;
-  color: #051937;
-  margin-bottom: 5rem;
-`;
+export const WorkTitle = withReveal(
+  styled.h2`
+    text-align: center;
+    font-size: 3.2rem;
+    color: #051937;
+    margin-bottom: 5rem;
+  `,
+  <Fade bottom />
+);
 
 export const ProjectsContainer = styled.div`
   display: grid;
@@ -46,40 +52,49 @@ export const ProjectTextContainer = styled.div`
   }
 `;
 
-export const ProjectTitle = styled.h2`
-  color: #051937;
-`;
+export const ProjectTitle = withReveal(
+  styled.h2`
+    color: #051937;
+  `,
+  <Fade top />
+);
 
-export const ProjectDesc = styled.p`
-  margin-top: 2rem;
-  max-width: 80%;
-  font-size: 1.6rem;
+export const ProjectDesc = withReveal(
+  styled.p`
+    margin-top: 2rem;
+    max-width: 80%;
+    font-size: 1.6rem;
 
-  @media ${device.tablet} {
-    max-width: 100%;
-  }
-`;
+    @media ${device.tablet} {
+      max-width: 100%;
+    }
+  `,
+  <Fade left />
+);
 
-export const BtnContainer = styled.div`
-  display: flex;
-  margin-top: 2rem;
-  gap: 1rem;
+export const BtnContainer = withReveal(
+  styled.div`
+    display: flex;
+    margin-top: 2rem;
+    gap: 1rem;
 
-  @media ${device.tablet} {
-    flex-direction: column;
-    align-items: center;
-  }
+    @media ${device.tablet} {
+      flex-direction: column;
+      align-items: center;
+    }
 
-  @media ${device.mobileM} {
-    margin-top: 1rem;
-  }
+    @media ${device.mobileM} {
+      margin-top: 1rem;
+    }
 
-  @media ${device.mobileS} {
-    margin-top: 0.5rem;
-  }
-`;
+    @media ${device.mobileS} {
+      margin-top: 0.5rem;
+    }
+  `,
+  <Fade right />
+);
 
-export const SourceCodeBtn = styled.button`
+export const SourceCodeBtn = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,6 +104,7 @@ export const SourceCodeBtn = styled.button`
   background-color: #051937;
   color: #fff;
   font-size: 1.6rem;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
@@ -104,7 +120,7 @@ export const SourceCodeBtn = styled.button`
   }
 `;
 
-export const LiveViewBtn = styled.button`
+export const LiveViewBtn = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,6 +130,7 @@ export const LiveViewBtn = styled.button`
   background-color: #fff;
   color: #051937;
   font-size: 1.6rem;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
@@ -129,29 +146,32 @@ export const LiveViewBtn = styled.button`
   }
 `;
 
-export const ProjectImgContainer = styled.div`
-  grid-area: b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  padding: 2rem 5rem;
-  background-color: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+export const ProjectImgContainer = withReveal(
+  styled.div`
+    grid-area: b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 2rem 5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 
-  &:hover {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-  }
+    &:hover {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+    }
 
-  @media ${device.tablet} {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-  }
-`;
+    @media ${device.tablet} {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+    }
+  `,
+  <Fade bottom />
+);
 
 export const ProjectImg = styled.img`
   max-width: 100%;
