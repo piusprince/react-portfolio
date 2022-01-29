@@ -1,102 +1,90 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { device } from "../../breakpoints";
+// import { device } from "../../breakpoints";
 
 export const NavWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background-image: linear-gradient(to right, #33345a, #051937);
-  padding: 2rem 2rem;
+  padding: 2rem 5rem;
 
-  /* @media ${device.tablet} {
-        white-space: nowrap;
-    } */
-
-  @media screen and (min-width: 425px) and (max-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  @media ${device.mobileL} {
+  @media (max-width: 700px) {
+    background-color: purple;
   }
 `;
 
 export const NavLogo = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-`;
-export const NavLogoImgWrapper = styled.div`
-  height: 5rem;
-  width: 5rem;
+  justify-content: flex-start;
 `;
 
 export const NavLogoImg = styled.img`
-  height: 100%;
-  width: 100%;
-  /* width: 5rem; */
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  margin-right: 2rem;
 `;
 
 export const NavLogoText = styled(Link)`
-  font-size: 1.6rem;
-  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
   text-decoration: none;
-  padding-left: 2rem;
+  margin-left: 1rem;
 `;
 
 export const NavMenu = styled.div`
   display: flex;
-  justify-content: space-evenly;
-
-  @media ${device.tablet} {
-    display: none;
-  }
+  justify-content: flex-end;
+  align-items: center;
 `;
 
 export const NavLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  color: white;
   text-decoration: none;
-  font-size: 1.6rem;
-  color: #fff;
-  padding: 0 2rem;
-  white-space: nowrap;
   transition: all 0.3s ease-in-out;
 
   &:hover {
     color: #60ecbd;
   }
-`;
 
-export const NavBtn = styled.button`
-  padding: 1rem 5rem;
-  cursor: pointer;
-  background-color: #60ecbd;
-  border-radius: 1rem;
-  border: 0 solid;
-  white-space: nowrap;
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  @media ${device.tablet} {
+  @media (max-width: 700px) {
     display: none;
   }
 `;
 
-export const NavMobileMenu = styled.div`
+export const MobileMenuBtn = styled.button`
   display: none;
 
-  @media ${device.tablet} {
+  @media (max-width: 700px) {
     display: block;
-    position: sticky;
-    top: 4rem;
-    right: 0;
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #60ecbd;
     color: white;
-    font-size: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.8;
+    z-index: 500;
+  }
+
+  &:hover {
+    color: black;
+  }
+
+  @media (min-width: 700px) {
+    display: none;
   }
 `;
