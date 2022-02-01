@@ -76,7 +76,6 @@ export const MobileMenuBtn = styled.button`
     border: none;
     outline: none;
     cursor: pointer;
-    opacity: 0.8;
     z-index: 500;
   }
 
