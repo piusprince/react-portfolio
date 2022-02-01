@@ -30,15 +30,6 @@ const Navbar = ({ profile, isOpen, toggleSidebar }) => {
       <MobileMenuBtn onClick={toggleSidebar}>
         {isOpen ? <FaTimes /> : <FaBars />}
       </MobileMenuBtn>
-
-      {/* {isOpen && (
-        <Sidebar>
-          <SidebarLink to="/">Home</SidebarLink>
-          <SidebarLink to="/about">About me</SidebarLink>
-          <SidebarLink to="/projects">Projects</SidebarLink>
-          <SidebarLink to="/services">Services</SidebarLink>
-        </Sidebar>
-      )} */}
     </NavWrapper>
   );
 };
