@@ -40,10 +40,6 @@ export const LeftTestimonialHeading = withReveal(
     font-size: 3.125rem;
     margin-bottom: 3rem;
     color: #051937;
-
-    @media ${device.tablet} {
-      text-align: center;
-    }
   `,
   <Fade bottom />
 );
