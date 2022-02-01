@@ -55,6 +55,7 @@ export const ProjectTextContainer = styled.div`
 export const ProjectTitle = withReveal(
   styled.h2`
     color: #051937;
+    font-size: 2.4rem;
   `,
   <Fade top />
 );
