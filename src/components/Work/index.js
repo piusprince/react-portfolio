@@ -27,11 +27,21 @@ const Work = () => {
             <ProjectTitle>{project.name}</ProjectTitle>
             <ProjectDesc>{project.desc}</ProjectDesc>
             <BtnContainer>
-              <SourceCodeBtn to="#">
+              <SourceCodeBtn
+                to={{
+                  pathname: project.github,
+                }}
+                target="_blank"
+              >
                 <FaGithub style={{ marginRight: 5 }} />
                 Source code
               </SourceCodeBtn>
-              <LiveViewBtn to="#">
+              <LiveViewBtn
+                to={{
+                  pathname: project.live,
+                }}
+                target="_blank"
+              >
                 <GrLaunch style={{ marginRight: 5 }} />
                 View project
               </LiveViewBtn>
