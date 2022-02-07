@@ -1,4 +1,3 @@
-import projectImg from "../../images/projectImg.webp";
 import bookstore from "../../images/bookstore.webp";
 import Pizza from "../../images/Pizza.webp";
 import pThought from "../../images/pThought.webp";
