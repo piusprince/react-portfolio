@@ -1,12 +1,13 @@
 import projectImg from "../../images/projectImg.webp";
 import bookstore from "../../images/bookstore.webp";
+import Pizza from "../../images/Pizza.webp";
 
 export const projects = [
   {
     id: 1,
     name: "Master's Pizza",
     desc: "A fictional pizza restaurant website with responsive user interface. This website was built with React and Styled Components. New features are being added such as building a login system, adding a cart feature, payment system, and more.",
-    img: projectImg,
+    img: Pizza,
   },
   {
     id: 2,
