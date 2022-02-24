@@ -1,6 +1,5 @@
 import fm from "../../images/FM22.webp";
 import COD from "../../images/COD.webp";
-import davinci from "../../images/davinci.webp";
 import Halo from "../../images/Halo.webp";
 
 export const data = [
