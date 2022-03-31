@@ -7,21 +7,28 @@ import profile from "./images/profile1.webp";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
+import Loader from "./components/Loader";
+import pMinDelay from "p-min-delay";
 
-const ProjectsPage = lazy(() => import("./pages/ProjectsPage/ProjectsPage"));
-const ServicesPage = lazy(() => import("./pages/ServicesPage/ServicesPage"));
-const AboutPage = lazy(() => import("./pages/AboutPage/AboutPage"));
+const ProjectsPage = lazy(() =>
+  pMinDelay(import("./pages/ProjectsPage/ProjectsPage"), 5000)
+);
+const ServicesPage = lazy(() =>
+  pMinDelay(import("./pages/ServicesPage/ServicesPage"), 5000)
+);
+const AboutPage = lazy(() =>
+  pMinDelay(import("./pages/AboutPage/AboutPage"), 5000)
+);
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
-    console.log("clicked");
   };
 
   return (
-    <Suspense fallback={<h2>Loading page</h2>}>
+    <Suspense fallback={<Loader />}>
       <Router>
         <Navbar
           profile={profile}
