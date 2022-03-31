@@ -77,8 +77,7 @@ export const MobileMenuBtn = styled.button`
     outline: none;
     cursor: pointer;
     z-index: 500;
-  }
-
+   
   &:hover {
     color: black;
   }

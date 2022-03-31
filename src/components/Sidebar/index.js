@@ -28,7 +28,25 @@ const SidebarContainer = styled.div`
   width: 100vw;
   height: 100vh;
   z-index: 100;
+  animation: ${({ toggle }) =>
+    toggle
+      ? "sidebar-open 0.5s ease-in-out"
+      : "sidebar-close 0.5s ease-in-out"};
+  @keyframes sidebar-open {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes sidebar-close {
+    0% {
+      transform: translateX(0);
 
+      transform: translateX(-100%);
+    }
+  }
   @media (min-width: 768px) {
     display: none;
   }
