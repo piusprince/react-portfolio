@@ -13,9 +13,7 @@ import pMinDelay from "p-min-delay";
 const ProjectsPage = lazy(() =>
   pMinDelay(import("./pages/ProjectsPage/ProjectsPage"), 5000)
 );
-const ServicesPage = lazy(() =>
-  pMinDelay(import("./pages/ServicesPage/ServicesPage"), 5000)
-);
+
 const AboutPage = lazy(() =>
   pMinDelay(import("./pages/AboutPage/AboutPage"), 5000)
 );
@@ -35,7 +33,7 @@ function App() {
           isOpen={isOpen}
           toggleSidebar={toggleSidebar}
         />
-        {isOpen && <Sidebar isOpen={isOpen} />}
+        {isOpen && <Sidebar />}
 
         <Switch>
           <Route exact path="/">
@@ -48,10 +46,6 @@ function App() {
 
           <Route path="/projects">
             <ProjectsPage />
-          </Route>
-
-          <Route path="/services">
-            <ServicesPage />
           </Route>
         </Switch>
 
