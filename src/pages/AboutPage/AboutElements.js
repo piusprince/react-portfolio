@@ -26,6 +26,7 @@ export const Text = withReveal(
   styled.p`
     font-size: 1.6rem;
     margin-bottom: 5rem;
+
     color: #051937;
   `,
   <Fade bottom />

@@ -1,21 +1,60 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { motion, AnimatePresence } from "framer-motion/dist/framer-motion";
 
 const Sidebar = () => {
   return (
-    <SidebarContainer>
-      <SidebarLink to="/">Home</SidebarLink>
-      <SidebarLink to="/about">About me</SidebarLink>
-      <SidebarLink to="/projects">Projects</SidebarLink>
-      <SidebarLink to="/services">Services</SidebarLink>
-    </SidebarContainer>
+    <AnimatePresence>
+      <SidebarContainer
+        initial={{ width: 0 }}
+        animate={{ width: 300 }}
+        exit={{
+          width: 0,
+          transition: { delay: 0.7, duration: 0.3 },
+        }}
+      >
+        <SidebarLink
+          initial="closed"
+          animate="open"
+          variants={linksVariant}
+          to="/"
+        >
+          Home
+        </SidebarLink>
+        <SidebarLink
+          initial="closed"
+          animate="open"
+          variants={linksVariant}
+          to="/about"
+        >
+          About me
+        </SidebarLink>
+        <SidebarLink
+          initial="closed"
+          animate="open"
+          variants={linksVariant}
+          to="/projects"
+        >
+          Projects
+        </SidebarLink>
+      </SidebarContainer>
+    </AnimatePresence>
   );
 };
 
 export default Sidebar;
 
-const SidebarContainer = styled.div`
+const linksVariant = {
+  closed: {
+    opacity: 0,
+  },
+  open: {
+    opacity: 1,
+  },
+};
+
+const SidebarContainer = styled(motion.div)`
   position: fixed;
   top: 0;
   right: 0;
@@ -25,34 +64,14 @@ const SidebarContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(to right, #33345a, #051937);
-  width: 100vw;
-  height: 100vh;
   z-index: 100;
-  animation: ${({ toggle }) =>
-    toggle
-      ? "sidebar-open 0.5s ease-in-out"
-      : "sidebar-close 0.5s ease-in-out"};
-  @keyframes sidebar-open {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  @keyframes sidebar-close {
-    0% {
-      transform: translateX(0);
 
-      transform: translateX(-100%);
-    }
-  }
   @media (min-width: 768px) {
     display: none;
   }
 `;
 
-const SidebarLink = styled(Link)`
+const SidebarLink = styled(motion(Link))`
   font-size: 2.4em;
   color: white;
   text-decoration: none;

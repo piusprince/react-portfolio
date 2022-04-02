@@ -24,7 +24,6 @@ const Navbar = ({ profile, isOpen, toggleSidebar }) => {
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About me</NavLink>
         <NavLink to="/projects">Projects</NavLink>
-        <NavLink to="/services">Services</NavLink>
       </NavMenu>
 
       <MobileMenuBtn onClick={toggleSidebar}>
