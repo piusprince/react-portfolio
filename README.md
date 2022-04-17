@@ -2,8 +2,18 @@
 
 ### This is a personal portfolio website built with React, Styled-Components and Framer Motion
 
-<img width="968" alt="hero page" src="https://github.com/piusprince/react-portfolio/tree/master/src/images/website-preview-1.png" /><br>
+[Visit the live site here](https://pius-prince-portfolio.netlify.app/)
 
-<img width="968" alt="projects section" src="https://github.com/piusprince/react-portfolio/tree/master/src/images/website-preview-2.png" /><br>
+## Hero section
 
-<img width="968" alt="testimonials section" src="https://github.com/piusprince/react-portfolio/tree/master/src/images/website-preview-3.png" />
+<img width="968" alt="hero page" src="/src/images/website-preview-1.png?raw=true" >
+
+<br>
+
+## Projects section
+
+<img width="968" alt="projects section" src="/src/images/website-preview-2.png" ><br>
+
+## Testimonial section
+
+<img width="968" alt="testimonials section" src="/src/images/website-preview-3.png">
