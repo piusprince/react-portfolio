@@ -51,11 +51,6 @@ export const DevIcons = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin-bottom: 5rem;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
 
   svg {
     height: 10rem;
