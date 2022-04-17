@@ -26,13 +26,13 @@ export const Text = withReveal(
   styled.p`
     font-size: 1.6rem;
     margin-bottom: 5rem;
-    width: 80%;
+    max-width: 80%;
     color: #051937;
     margin: 5rem auto;
 
     @media ${device.tablet} {
       text-align: left;
-      width: 100%;
+      max-width: 100%;
     }
   `,
   <Fade bottom />
@@ -65,6 +65,7 @@ export const Game = withReveal(
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin: 0 auto;
     }
   `,
   <Fade bottom />
