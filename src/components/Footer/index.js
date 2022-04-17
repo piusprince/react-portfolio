@@ -23,15 +23,29 @@ const Footer = ({ profile }) => {
         <FooterText to="/">Pius Prince</FooterText>
       </FooterLogoWrapper>
       <FooterLinksWrapper>
-        <FooterLink to="#github">
+        <FooterLink
+          to={{ pathname: "https://github.com/piusprince" }}
+          target="_blank"
+        >
           <FaGithub />
         </FooterLink>
 
-        <FooterLink to="#linkedin">
+        <FooterLink
+          to={{
+            pathname:
+              "https://www.linkedin.com/in/pius-prince-oduro-92156b1b4/",
+          }}
+          target="_blank"
+        >
           <FaLinkedin />
         </FooterLink>
 
-        <FooterLink to="#twitter">
+        <FooterLink
+          to={{
+            pathname: "https://twitter.com/PiusOPrince",
+          }}
+          target="_blank"
+        >
           <FaTwitter />
         </FooterLink>
       </FooterLinksWrapper>
