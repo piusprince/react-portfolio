@@ -64,6 +64,10 @@ export const MobileMenuBtn = styled.button`
   display: none;
 
   @media (max-width: 700px) {
+    &:visited, &:active, &:hover, &:focus, &:link {
+    background-color: #60ecbd;
+      
+    }
     display: block;
     position: fixed;
     top: 2rem;
@@ -78,11 +82,4 @@ export const MobileMenuBtn = styled.button`
     cursor: pointer;
     z-index: 500;
    
-  &:hover {
-    color: black;
-  }
-
-  @media (min-width: 700px) {
-    display: none;
-  }
 `;
