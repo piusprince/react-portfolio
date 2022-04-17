@@ -28,6 +28,7 @@ export const LeftTestimonial = styled.div`
     margin-left: 0;
     position: relative;
     padding: 2.5rem;
+    margin-top: -10rem;
   }
 
   @media ${device.mobileM} {
