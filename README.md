@@ -6,7 +6,7 @@
 
 ## Hero section
 
-<img width="968" alt="hero page" src="/src/images/website-preview-1.png?raw=true" >
+<img width="968" alt="hero section" src="/src/images/website-preview-1.png?raw=true" >
 
 <br>
 
