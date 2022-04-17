@@ -21,6 +21,7 @@ const Work = () => {
   return (
     <WorkWrapper>
       <WorkTitle>Projects</WorkTitle>
+
       {projects.map((project) => (
         <ProjectsContainer key={project.id}>
           <ProjectTextContainer>

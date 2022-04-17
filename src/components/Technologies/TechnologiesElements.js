@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import withReveal from "react-reveal/withReveal";
 import Fade from "react-reveal/Fade";
+import { device } from "../../breakpoints";
 
 import {
   DiReact,
@@ -12,7 +13,10 @@ import {
   DiGit,
 } from "react-icons/di";
 
-export const TechnologiesWrapper = styled.section``;
+export const TechnologiesWrapper = styled.section`
+  margin-top: 5rem;
+  padding: 2rem 5rem;
+`;
 
 export const Title = withReveal(
   styled.h2`
@@ -20,6 +24,10 @@ export const Title = withReveal(
     text-align: center;
     margin-bottom: 5rem;
     color: #051937;
+
+    @media ${device.tablet} {
+      text-align: left;
+    }
   `,
   <Fade bottom />
 );
@@ -30,6 +38,10 @@ export const Text = withReveal(
     text-align: center;
     margin-bottom: 5rem;
     color: #051937;
+
+    @media ${device.tablet} {
+      text-align: left;
+    }
   `,
   <Fade bottom />
 );

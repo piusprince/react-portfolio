@@ -26,8 +26,14 @@ export const Text = withReveal(
   styled.p`
     font-size: 1.6rem;
     margin-bottom: 5rem;
-
+    width: 80%;
     color: #051937;
+    margin: 5rem auto;
+
+    @media ${device.tablet} {
+      text-align: left;
+      width: 100%;
+    }
   `,
   <Fade bottom />
 );
