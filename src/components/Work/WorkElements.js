@@ -15,6 +15,10 @@ export const WorkTitle = withReveal(
     font-size: 3.2rem;
     color: #051937;
     margin-bottom: 5rem;
+
+    @media ${device.tablet} {
+      text-align: left;
+    }
   `,
   <Fade bottom />
 );
