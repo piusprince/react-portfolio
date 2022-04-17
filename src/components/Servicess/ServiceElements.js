@@ -13,6 +13,10 @@ export const ServiceHeading = withReveal(
     text-align: center;
     margin-bottom: 5rem;
     color: #051937;
+
+    @media ${device.tablet} {
+      text-align: left;
+    }
   `,
   <Fade bottom />
 );
