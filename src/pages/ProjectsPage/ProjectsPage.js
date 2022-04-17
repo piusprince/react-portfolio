@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import Work from "../../components/Work";
+import { projects } from "../../components/Work/projects";
+import styled from "styled-components";
 
 const ProjectsPage = () => {
-    return (
-       <h1>Welcome to the projects page</h1>
-    )
-}
+  return <Work projects={projects} />;
+};
 
-export default ProjectsPage
+export default ProjectsPage;
